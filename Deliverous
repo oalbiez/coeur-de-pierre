@@ -11,3 +11,6 @@ mysql:
   image: mariadb
   environment:
     MYSQL_ROOT_PASSWORD: {{ .db_passwd }}
+  volumes:
+    - name: db
+      path: /var/lib/mysql
