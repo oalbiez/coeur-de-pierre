@@ -5,9 +5,9 @@ wordpress:
       container_port: 80
       host_port: 80
     environment:
-      WORDPRESS_DB_PASSWORD: {{.PASSWD}}
+      WORDPRESS_DB_PASSWORD: {{ .db_passwd }}
 
   mysql:
     image: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: {{.PASSWD}}
+      MYSQL_ROOT_PASSWORD: {{ .db_passwd }}
