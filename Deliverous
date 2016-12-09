@@ -1,0 +1,13 @@
+wordpress:
+    image: wordpress
+    ports:
+    - ip: front
+      container_port: 80
+      host_port: 80
+    environment:
+      WORDPRESS_DB_PASSWORD: {{.PASSWD}}
+
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: {{.PASSWD}}
