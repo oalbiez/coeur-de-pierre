@@ -6,6 +6,8 @@ wordpress:
     host_port: 80
   environment:
     WORDPRESS_DB_PASSWORD: {{ .db_passwd }}
+  deploy_with:
+  - mysql
 
 mysql:
   image: mariadb
